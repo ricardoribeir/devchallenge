@@ -1,0 +1,176 @@
+/* Style CSS Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-orange: #D2872C;
+    --color-gray: #766F68; 
+}
+
+body {
+    height: 100vh;
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-gray);
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    display: none;
+}
+/* Style CSS Geral */
+
+/* Style Header */
+header {
+    width: 100%;
+    max-width: 100%;
+}
+
+.menu .menu-hamburguer {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    margin: 5vh 0 8vh;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 8px;
+}
+
+nav a {
+    color: var(--color-gray);
+    font-size: 18px;
+}
+
+.menu h3 {
+    font-size: 32px;
+    color: var(--color-orange);
+}
+/* Style Header */
+
+/* Style Main */
+main .container {
+  width: 100%;
+  height: 600px;
+  background: url('../images/team.jpg') no-repeat top right 0;
+  background-size: 65%;
+}
+
+main .container h1 {
+    width: 50%;
+    margin-left: 8%;
+    font-size: 5.2vw;
+}
+
+main .container p {
+    width: 40%;
+    margin: 2% 8% 0;
+    font-size: 2.14vw;
+}
+
+main .container button {
+    width: 25%;
+    margin: 4% 8% 0;
+    padding: 1%;
+    font-size: 2.15vw;
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+/* Style Main */
+
+/* Reponsive */
+@media screen and (max-width: 850px) {
+.menu {
+    margin: 4vh 0 0 0;
+}
+
+.menu .menu-hamburguer {
+    display : block;
+    height: 50px;
+}
+
+nav { display: none; }
+	#menu:checked ~ nav {
+        display: flex;
+        position: fixed;
+    }
+
+.menu nav ul {
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    height: auto;
+    z-index: 1000;
+}
+
+.menu nav {
+    margin: 3% 2% 0;
+    text-align: center;
+}
+
+.menu nav ul li {
+    padding: 1vh 2vw;
+}
+
+}
+
+@media screen and (max-width: 600px){
+ .menu .menu-hamburguer {
+    height: 40px;
+ }
+
+ main .container {
+     background: url('../images/team.jpg') no-repeat top 0 center;
+     background-size: 100%;
+     text-align: center;
+ }
+
+ main .container h1 {
+    position: absolute;
+    width: 100%;
+    margin: 62% auto;
+    font-size: 9vw;
+    padding: 0 3%;
+ }
+
+ main .container p {
+    position: absolute;
+    width: 100%;
+    margin: 86% auto;
+    padding: 4% 8% ; 
+    font-size: 5vw;
+ }
+
+ main .container button {
+    position: absolute;
+    width: 40vw;
+    margin-top: 110%;
+    left: 22%;
+    padding-top: 2%; 
+    font-size: 6vw;
+ }
+}
